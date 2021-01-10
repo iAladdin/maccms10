@@ -1,0 +1,22 @@
+version: "3"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: .docker/php/Dockerfile
+    image: maccms-docker
+    ports:
+      - "8080:80"
+    restart: always
+    depends_on:
+      - db
+  db:
+    image: mysql:5.7
+    container_name: db
+    ports:
+      - "13306:3306"
+    environment:
+      - MYSQL_DATABASE=docker
+      - MYSQL_USER=app
+      - MYSQL_PASSWORD=password
+      - MYSQL_ROOT_PASSWORD=password
