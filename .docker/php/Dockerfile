@@ -25,6 +25,6 @@ RUN service ssh start
 COPY .docker/php/start.sh /
 RUN chmod +x /start.sh
 
-CMD [ "/start.sh" ] 
+CMD ["sh","/usr/sbin/sshd -D && apache2-foreground"]
 
 WORKDIR /srv/app
