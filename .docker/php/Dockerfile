@@ -2,7 +2,7 @@ FROM php:7.4-apache
 
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
-RUN set -eux; apt-get update; apt-get install -y libzip-dev zlib1g-dev libpng-dev; docker-php-ext-install zip gd 
+RUN set -eux; apt-get update; apt-get install -y libzip-dev zlib1g-dev libpng-dev openssh-server; docker-php-ext-install zip gd 
 
 
 COPY . /srv/app
@@ -19,5 +19,9 @@ RUN apt-get update && apt-get install -y \
 
 RUN chown -R www-data:www-data /srv/app \
     && a2enmod rewrite
+
+RUN service ssh start
+
+CMD [ "/usr/sbin/sshd","-D" ]
 
 WORKDIR /srv/app
