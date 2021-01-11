@@ -22,6 +22,6 @@ RUN chown -R www-data:www-data /srv/app \
 
 RUN service ssh start
 
-CMD [ "/usr/sbin/sshd","-D" ]
+CMD [ "/usr/sbin/sshd","-D","apache2-foreground" ]
 
 WORKDIR /srv/app
