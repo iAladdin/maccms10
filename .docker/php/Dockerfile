@@ -22,6 +22,9 @@ RUN chown -R www-data:www-data /srv/app \
 
 RUN service ssh start
 
-CMD [ "/usr/sbin/sshd","-D","apache2-foreground" ]
+COPY .docker/php/start.sh /
+RUN chmod +x /start.sh
+
+CMD [ "/start.sh" ] 
 
 WORKDIR /srv/app
