@@ -20,20 +20,4 @@ RUN apt-get update && apt-get install -y \
 RUN chown -R www-data:www-data /srv/app \
     && a2enmod rewrite
 
-RUN service ssh start
-
-COPY .docker/php/start.sh /
-RUN chmod +x /start.sh
-
-
-ENTRYPOINT ["docker-php-entrypoint"]
-# https://httpd.apache.org/docs/2.4/stopping.html#gracefulstop
-STOPSIGNAL SIGWINCH
-
-EXPOSE 80
-
-EXPOSE 22
-
-CMD ["sh","-c","/usr/sbin/sshd -D & && apache2-foreground"]
-
 WORKDIR /srv/app
