@@ -40,11 +40,8 @@ if (!is_writable('./runtime')) {
 $extraSrc = APP_PATH . '/install/origins/extra';
 $extraDest = APP_PATH;
 
-$backupSrc = APP_PATH . '/install/origins/backup';
-$backupDest = APP_PATH . '/data';
-
-$updateSrc = APP_PATH . '/install/origins/update';
-$updateDest = APP_PATH . '/data';
+$dataSrc = APP_PATH . '/install/origins/data';
+$dataDest = APP_PATH;
 
 $runtimeSrc = APP_PATH . '/install/origins/runtime';
 $runtimeDest = __DIR__;
@@ -53,8 +50,7 @@ $uploadSrc = APP_PATH . '/install/origins/upload';
 $uploadDest = __DIR__;
 
 shell_exec("cp -r $extraSrc $extraDest");
-shell_exec("cp -r $backupSrc $backupDest");
-shell_exec("cp -r $updateSrc $updateDest");
+shell_exec("cp -r $dataSrc $dataDest");
 shell_exec("cp -r $runtimeSrc $runtimeDest");
 shell_exec("cp -r $uploadSrc $uploadDest");
 
