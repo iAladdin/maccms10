@@ -37,12 +37,26 @@ if (!is_writable('./runtime')) {
 	exit;
 }
 
-$src = APP_PATH . '/install/origins/extra';
-$dest = APP_PATH . '/extra';
-shell_exec("cp -r $src $dest");
+$extraSrc = APP_PATH . '/install/origins/extra';
+$extraDest = APP_PATH;
 
-copy(APP_PATH . '/install/origins/config.php', APP_PATH . '/config.php');
-copy(APP_PATH . '/install/origins/database.php', APP_PATH . '/database.php');
+$backupSrc = APP_PATH . '/install/origins/backup';
+$backupDest = APP_PATH . '/data';
+
+$updateSrc = APP_PATH . '/install/origins/update';
+$updateDest = APP_PATH . '/data';
+
+$runtimeSrc = APP_PATH . '/install/origins/runtime';
+$runtimeDest = __DIR__;
+
+$uploadSrc = APP_PATH . '/install/origins/upload';
+$uploadDest = __DIR__;
+
+shell_exec("cp -r $extraSrc $extraDest");
+shell_exec("cp -r $backupSrc $backupDest");
+shell_exec("cp -r $updateSrc $updateDest");
+shell_exec("cp -r $runtimeSrc $runtimeDest");
+shell_exec("cp -r $uploadSrc $uploadDest");
 
 
 // 加载框架引导文件
