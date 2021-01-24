@@ -1,7 +1,7 @@
 <?php
-return array (
-  'db' => 
-  array (
+return array(
+  'db' =>
+  array(
     'type' => 'mysql',
     'path' => '',
     'server' => '127.0.0.1',
@@ -15,8 +15,8 @@ return array (
     'compress' => 1,
     'compress_level' => 4,
   ),
-  'site' => 
-  array (
+  'site' =>
+  array(
     'site_name' => '免费短视频分享大全 - 大中国',
     'site_url' => 'www.test.cn',
     'site_wapurl' => 'wap.test.cn',
@@ -39,8 +39,8 @@ return array (
     'ads_dir' => 'ads',
     'mob_ads_dir' => 'ads',
   ),
-  'app' => 
-  array (
+  'app' =>
+  array(
     'pathinfo_depr' => '/',
     'suffix' => 'html',
     'popedom_filter' => '0',
@@ -76,14 +76,14 @@ return array (
     'vod_extend_version' => '高清版,剧场版,抢先版,OVA,TV,影院版',
     'vod_extend_area' => '大陆,香港,台湾,美国,韩国,日本,泰国,新加坡,马来西亚,印度,英国,法国,加拿大,西班牙,俄罗斯,其它',
     'vod_extend_lang' => '国语,英语,粤语,闽南语,韩语,日语,法语,德语,其它',
-    'vod_extend_year' => '2018,2017,2016,2015,2014,2013,2012,2011,2010,2009,2008,2007,2006,2005,2004,2003,2002,2001,2000',
+    'vod_extend_year' => '2021,2020,2019,2018,2017,2016,2015,2014,2013,2012,2011,2010,2009,2008,2007,2006,2005,2004,2003,2002,2001,2000',
     'vod_extend_weekday' => '一,二,三,四,五,六,日',
     'actor_extend_area' => '大陆,香港,台湾,美国,韩国,日本,泰国,新加坡,马来西亚,印度,英国,法国,加拿大,西班牙,俄罗斯,其它',
     'filter_words' => 'www,http,com,net',
     'extra_var' => '',
   ),
-  'user' => 
-  array (
+  'user' =>
+  array(
     'status' => '1',
     'reg_open' => '1',
     'reg_status' => '1',
@@ -110,8 +110,8 @@ return array (
     'portrait_size' => '100x100',
     'filter_words' => 'admin,cao,sex,xxx',
   ),
-  'gbook' => 
-  array (
+  'gbook' =>
+  array(
     'status' => '1',
     'audit' => '0',
     'login' => '0',
@@ -119,8 +119,8 @@ return array (
     'pagesize' => '20',
     'timespan' => '3',
   ),
-  'comment' => 
-  array (
+  'comment' =>
+  array(
     'status' => '1',
     'audit' => '0',
     'login' => '0',
@@ -128,8 +128,8 @@ return array (
     'pagesize' => '20',
     'timespan' => '3',
   ),
-  'upload' => 
-  array (
+  'upload' =>
+  array(
     'thumb' => '0',
     'thumb_size' => '300x300',
     'thumb_type' => '1',
@@ -141,10 +141,10 @@ return array (
     'protocol' => 'http',
     'mode' => 'local',
     'remoteurl' => 'http://img.maccms.com/',
-    'api' => 
-    array (
-      'ftp' => 
-      array (
+    'api' =>
+    array(
+      'ftp' =>
+      array(
         'host' => '',
         'port' => '21',
         'user' => 'test',
@@ -152,22 +152,22 @@ return array (
         'path' => '/',
         'url' => '',
       ),
-      'qiniu' => 
-      array (
+      'qiniu' =>
+      array(
         'bucket' => '',
         'accesskey' => '',
         'secretkey' => '',
         'url' => '',
       ),
-      'upyun' => 
-      array (
+      'upyun' =>
+      array(
         'bucket' => '',
         'username' => '',
         'pwd' => '',
         'url' => '',
       ),
-      'weibo' => 
-      array (
+      'weibo' =>
+      array(
         'user' => '',
         'pwd' => '',
         'size' => 'large',
@@ -176,52 +176,52 @@ return array (
       ),
     ),
   ),
-  'interface' => 
-  array (
+  'interface' =>
+  array(
     'status' => '1',
     'pass' => 'TBAKOMRQBCCQCBLK',
     'vodtype' => '动作片=动作',
     'arttype' => '头条=头条',
   ),
-  'pay' => 
-  array (
+  'pay' =>
+  array(
     'min' => '10',
     'scale' => '1',
-    'card' => 
-    array (
+    'card' =>
+    array(
       'url' => '',
     ),
-    'alipay' => 
-    array (
+    'alipay' =>
+    array(
       'account' => '111',
       'appid' => '',
       'appkey' => '',
     ),
-    'codepay' => 
-    array (
+    'codepay' =>
+    array(
       'appid' => '40625',
       'appkey' => 'cI1YHggnYbQyA8lLpOu7wXhtuVjULqZZ',
       'type' => '1,2',
       'act' => '0',
     ),
-    'weixin' => 
-    array (
+    'weixin' =>
+    array(
       'appid' => '222',
       'mchid' => '',
       'appkey' => '',
     ),
-    'zhapay' => 
-    array (
+    'zhapay' =>
+    array(
       'appid' => '18039',
       'appkey' => 'bW2V5oo3TdeXzwyjCwVwhX3guDGO8YDX',
       'type' => '1,2',
       'act' => '2',
     ),
   ),
-  'collect' => 
-  array (
-    'vod' => 
-    array (
+  'collect' =>
+  array(
+    'vod' =>
+    array(
       'status' => '1',
       'hits_start' => '1',
       'hits_end' => '1000',
@@ -242,8 +242,8 @@ return array (
       'thesaurus' => ' =',
       'words' => '',
     ),
-    'art' => 
-    array (
+    'art' =>
+    array(
       'status' => '1',
       'hits_start' => '1',
       'hits_end' => '1000',
@@ -260,8 +260,8 @@ return array (
       'thesaurus' => '',
       'words' => '',
     ),
-    'actor' => 
-    array (
+    'actor' =>
+    array(
       'status' => '0',
       'hits_start' => '1',
       'hits_end' => '999',
@@ -277,8 +277,8 @@ return array (
       'words' => '',
       'inrule' => ',a',
     ),
-    'role' => 
-    array (
+    'role' =>
+    array(
       'status' => '0',
       'hits_start' => '1',
       'hits_end' => '999',
@@ -288,8 +288,8 @@ return array (
       'pic' => '0',
       'psernd' => '0',
       'psesyn' => '0',
-      'uprule' => 
-      array (
+      'uprule' =>
+      array(
         0 => 'a',
         1 => 'b',
         2 => 'c',
@@ -299,10 +299,10 @@ return array (
       'words' => '',
     ),
   ),
-  'api' => 
-  array (
-    'vod' => 
-    array (
+  'api' =>
+  array(
+    'vod' =>
+    array(
       'status' => 0,
       'charge' => '0',
       'pagesize' => '20',
@@ -313,8 +313,8 @@ return array (
       'from' => '',
       'auth' => 'maccms.com#163.com',
     ),
-    'art' => 
-    array (
+    'art' =>
+    array(
       'status' => 0,
       'charge' => '0',
       'pagesize' => '20',
@@ -324,8 +324,8 @@ return array (
       'cachetime' => '',
       'auth' => 'qq.com#baidu.com',
     ),
-    'actor' => 
-    array (
+    'actor' =>
+    array(
       'status' => '1',
       'charge' => '0',
       'pagesize' => '20',
@@ -335,23 +335,23 @@ return array (
       'auth' => '',
     ),
   ),
-  'connect' => 
-  array (
-    'qq' => 
-    array (
+  'connect' =>
+  array(
+    'qq' =>
+    array(
       'status' => '0',
       'key' => 'aa',
       'secret' => 'bb',
     ),
-    'weixin' => 
-    array (
+    'weixin' =>
+    array(
       'status' => '0',
       'key' => 'cc',
       'secret' => 'dd',
     ),
   ),
-  'weixin' => 
-  array (
+  'weixin' =>
+  array(
     'status' => '1',
     'duijie' => 'wx.maccms.com',
     'sousuo' => 'wx.maccms.com',
@@ -377,8 +377,8 @@ return array (
     'gjci4' => 'http://img.aolusb.com/im/201601/201612723554344882.jpg',
     'gjcl4' => 'http://www.loldytt.com/Xijudianying/WPDWP/',
   ),
-  'view' => 
-  array (
+  'view' =>
+  array(
     'index' => '0',
     'map' => '0',
     'search' => '0',
@@ -395,8 +395,8 @@ return array (
     'vod_down' => '0',
     'art_detail' => '0',
   ),
-  'path' => 
-  array (
+  'path' =>
+  array(
     'topic_index' => 'topic/index',
     'topic_detail' => 'topic/{id}/index',
     'vod_type' => 'vodtypehtml/{id}/index',
@@ -408,8 +408,8 @@ return array (
     'page_sp' => '_',
     'suffix' => 'html',
   ),
-  'rewrite' => 
-  array (
+  'rewrite' =>
+  array(
     'suffix_hide' => '0',
     'route_status' => '0',
     'status' => '0',
@@ -463,8 +463,8 @@ artsearch/<wd?>-<by?>-<class?>-<level?>-<letter?>-<order?>-<page?>-<tag?>   => a
 
 label-<file> => label/index',
   ),
-  'email' => 
-  array (
+  'email' =>
+  array(
     'host' => 'smtp.qq.com',
     'port' => '587',
     'username' => '123456@qq.com',
@@ -472,8 +472,8 @@ label-<file> => label/index',
     'nick' => '苹果CMS',
     'test' => '123456@qq.com',
   ),
-  'play' => 
-  array (
+  'play' =>
+  array(
     'width' => '100%',
     'height' => '100%',
     'widthmob' => '100%',
@@ -490,8 +490,8 @@ label-<file> => label/index',
     'flag' => '0',
     'colors' => '000000,F6F6F6,F6F6F6,333333,666666,FFFFF,FF0000,2c2c2c,ffffff,a3a3a3,2c2c2c,adadad,adadad,48486c,fcfcfc',
   ),
-  'sms' => 
-  array (
+  'sms' =>
+  array(
     'type' => '',
     'appid' => 'xxx',
     'appkey' => 'xxxx',
@@ -500,37 +500,36 @@ label-<file> => label/index',
     'tpl_code_bind' => 'SMS_144940283',
     'tpl_code_findpass' => 'SMS_144851023',
   ),
-  'extra' => 
-  array (
-  ),
-  'seo' => 
-  array (
-    'vod' => 
-    array (
+  'extra' =>
+  array(),
+  'seo' =>
+  array(
+    'vod' =>
+    array(
       'name' => '视频首页',
       'key' => '短视频,搞笑视频,视频分享,免费视频,在线视频,预告片',
       'des' => '提供最新最快的视频分享数据',
     ),
-    'art' => 
-    array (
+    'art' =>
+    array(
       'name' => '文章首页',
       'key' => '新闻资讯,娱乐新闻,八卦娱乐,狗仔队,重大事件',
       'des' => '提供最新最快的新闻资讯',
     ),
-    'actor' => 
-    array (
+    'actor' =>
+    array(
       'name' => '演员首页',
       'key' => '大陆明星,港台明星,日韩明星,欧美明星,最火明星',
       'des' => '明星个人信息介绍',
     ),
-    'role' => 
-    array (
+    'role' =>
+    array(
       'name' => '角色首页',
       'key' => '电影角色,电视剧角色,动漫角色,综艺角色',
       'des' => '角色人物介绍',
     ),
-    'plot' => 
-    array (
+    'plot' =>
+    array(
       'name' => '剧情首页',
       'key' => '剧情连载,剧情更新,剧情前瞻,剧情完结',
       'des' => '提供最新的剧情信息',
