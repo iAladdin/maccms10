@@ -49,10 +49,19 @@ $runtimeDest = __DIR__;
 $uploadSrc = APP_PATH . '/install/origins/upload';
 $uploadDest = __DIR__;
 
-shell_exec("cp -r $extraSrc $extraDest");
-shell_exec("cp -r $dataSrc $dataDest");
-shell_exec("cp -r $runtimeSrc $runtimeDest");
-shell_exec("cp -r $uploadSrc $uploadDest");
+$staticSrc = APP_PATH . '/install/origins/static';
+$staticDest = __DIR__;
+
+$templateSrc = APP_PATH . '/install/origins/template';
+$templateDest = __DIR__;
+
+
+shell_exec("tar -xvzf $extraSrc -C $extraDest");
+shell_exec("tar -xvzf $dataSrc -C $dataDest");
+shell_exec("tar -xvzf $runtimeSrc -C $runtimeDest");
+shell_exec("tar -xvzf $uploadSrc -C $uploadDest");
+shell_exec("tar -xvzf $staticSrc -C $staticDest");
+shell_exec("tar -xvzf $templateSrc -C $templateDest");
 
 
 // 加载框架引导文件
