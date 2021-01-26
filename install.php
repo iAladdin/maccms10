@@ -37,23 +37,23 @@ if (!is_writable('./runtime')) {
 	exit;
 }
 
-$extraSrc = APP_PATH . '/install/origins/extra';
-$extraDest = APP_PATH;
+$extraSrc = APP_PATH . '/install/origins/extra.tar.gz';
+$extraDest = APP_PATH . 'extra';
 
-$dataSrc = APP_PATH . '/install/origins/data';
-$dataDest = APP_PATH;
+$dataSrc = APP_PATH . '/install/origins/data.tar.gz';
+$dataDest = APP_PATH . 'data';
 
-$runtimeSrc = APP_PATH . '/install/origins/runtime';
-$runtimeDest = __DIR__;
+$runtimeSrc = APP_PATH . '/install/origins/runtime.tar.gz';
+$runtimeDest = __DIR__ . 'runtime';
 
-$uploadSrc = APP_PATH . '/install/origins/upload';
-$uploadDest = __DIR__;
+$uploadSrc = APP_PATH . '/install/origins/upload.tar.gz';
+$uploadDest = __DIR__ . 'upload';
 
-$staticSrc = APP_PATH . '/install/origins/static';
-$staticDest = __DIR__;
+$staticSrc = APP_PATH . '/install/origins/static.tar.gz';
+$staticDest = __DIR__ . 'static';
 
-$templateSrc = APP_PATH . '/install/origins/template';
-$templateDest = __DIR__;
+$templateSrc = APP_PATH . '/install/origins/template.tar.gz';
+$templateDest = __DIR__ . 'template';
 
 
 shell_exec("tar -xvzf $extraSrc -C $extraDest");
