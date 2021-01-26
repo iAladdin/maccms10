@@ -38,22 +38,22 @@ if (!is_writable('./runtime')) {
 }
 
 $extraSrc = APP_PATH . '/install/origins/extra.tar.gz';
-$extraDest = APP_PATH . 'extra';
+$extraDest = APP_PATH;
 
 $dataSrc = APP_PATH . '/install/origins/data.tar.gz';
-$dataDest = APP_PATH . 'data';
+$dataDest = APP_PATH;
 
 $runtimeSrc = APP_PATH . '/install/origins/runtime.tar.gz';
-$runtimeDest = __DIR__ . 'runtime';
+$runtimeDest = __DIR__;
 
 $uploadSrc = APP_PATH . '/install/origins/upload.tar.gz';
-$uploadDest = __DIR__ . 'upload';
+$uploadDest = __DIR__;
 
 $staticSrc = APP_PATH . '/install/origins/static.tar.gz';
-$staticDest = __DIR__ . 'static';
+$staticDest = __DIR__;
 
 $templateSrc = APP_PATH . '/install/origins/template.tar.gz';
-$templateDest = __DIR__ . 'template';
+$templateDest = __DIR__;
 
 
 shell_exec("tar -xvzf $extraSrc -C $extraDest");
