@@ -7,7 +7,7 @@
 *內部處理key：開頭 model/、controller/、只在模塊內使用
 */
 return [
-    'lang_ver'=>'1059+',
+    'lang_ver'=>'1068+',
     'hello'  => '歡迎使用',
     'maccms_name'=>'蘋果CMS-v10',
     'maccms_copyright'=>'© MacCMS All Rights Reserved.',
@@ -85,7 +85,7 @@ return [
     'just'=>'剛剛',
     'day_after_tomorrow'=>'後天',
     'tomorrow'=>'明天',
-    'year'=>'年',
+    'year'=>'年份',
     'month'=>'月',
     'day'=>'日',
     'yes'=>'是',
@@ -198,6 +198,7 @@ return [
     'area'=>'地區',
     'lang'=>'語言',
     'sex'=>'性別',
+    'sum'=>'共',
     'opt'=>'操作',
     'opt_content'=>'內容操作',
     'name'=>'名稱',
@@ -251,13 +252,14 @@ return [
     'pic'=>'圖片',
     'pic_thumb'=>'縮略圖',
     'pic_slide'=>'海報圖',
+    'pic_screenshot'=>'截圖',
     'upload'=>'上傳',
     'upload_pic'=>'上傳圖片',
     'blurb'=>'簡介',
     'content'=>'詳情',
     'blurb_auto_tip'=>'不填寫將自動從第壹頁詳情裏獲取前100個字',
     'up'=>'頂',
-    'down'=>'踩',
+    'hate'=>'踩',
     'rnd_make'=>'隨機生成',
     'score'=>'平均分',
     'score_all'=>'總評分',
@@ -479,6 +481,13 @@ return [
     'merge'=>'合並',
     'douban_id'=>'豆瓣ID',
     'rel_name'=>'關聯數據名稱',
+    'preview'=>'預覽',
+    'screenshot_preview'=>'截圖預覽',
+    'screenshot_tip'=>'每行壹個圖片地址支持遠程url、本地路徑、自定義名稱備註，例如：
+圖1$upload/test.jpg
+圖2$https://www.baidu.com/logo.png
+https://www.baidu.com/123.jpg
+    ',
 
     'menu/index'=>'首頁',
     'menu/welcome'=>'歡迎頁面',
@@ -1273,29 +1282,20 @@ return [
     'admin/system/configupload/mode_remote'=>'遠程訪問',
     'admin/system/configupload/remoteurl'=>'圖片遠程URL',
     'admin/system/configupload/remoteurl_tip'=>'本地圖片如存在遠程，可使用此功',
-
+    'admin/system/configupload/img_key'=>'反盜鏈標識',
+    'admin/system/configupload/img_key_tip'=>'需要處理防盜鏈的域名或關鍵字多個請用|連接',
+    'admin/system/configupload/img_api'=>'反盜鏈接口',
+    'admin/system/configupload/img_api_tip'=>'處理防盜鏈圖片的接口地址',
 
     'admin/system/configsms/title'=>'短信發送配置',
     'admin/system/configsms/tip'=>'提示信息：<br>
-                        請務必按照短信接口服務商的要求做好短信簽名和短信內容的設置。<br>
-                        騰訊雲短信：https://cloud.tencent.com/product/sms<br>
-                        騰訊雲短信模板例子：<br>
-                        尊敬的用戶，您的註冊會員驗證碼為：{1}，請勿泄漏於他人！<br>
-                        驗證碼為：{1}，您正在綁定手機，若非本人操作，請勿泄露。<br>
-                        驗證碼為：{1}，您正在進行密碼重置操作，如非本人操作，請忽略本短信！<br>
-                        阿裏雲短信：https://www.aliyun.com/product/sms<br>
-                        阿裏雲短信模板例子：<br>
-                        尊敬的用戶，您的註冊會員驗證碼為：${code}，請勿泄漏於他人！<br>
-                        驗證碼為：${code}，您正在綁定手機，若非本人操作，請勿泄露。<br>
-                        驗證碼為：${code}，您正在進行密碼重置操作，如非本人操作，請忽略本短信！<br>',
+                        請務必按照短信接口服務商的要求做好短信簽名和短信內容的設置。<br>',
     'admin/system/configsms/type'=>'服務商',
-    'admin/system/configsms/appid_tip'=>'騰訊雲對應AppId，阿裏雲對應KeyId',
-    'admin/system/configsms/appkey_tip'=>'騰訊雲對應AppKey，阿裏雲對應KeySecret',
     'admin/system/configsms/sign'=>'短信簽名',
     'admin/system/configsms/tpl_code_reg'=>'註冊模板編號',
     'admin/system/configsms/tpl_code_tip'=>'模板編號需要在服務商短信控制臺中申請',
     'admin/system/configsms/tpl_code_bind'=>'綁定模板編號',
-    'admin/system/configsms/tpl_code_findpass'=>'註冊模板編號',
+    'admin/system/configsms/tpl_code_findpass'=>'找回密碼模板編號',
     'admin/system/configsms/test_err'=>'發生錯誤，請檢查是否開啟相應擴展庫!',
 
 
@@ -1451,7 +1451,6 @@ return [
     'admin/vod/version'=>'資源版本',
     'admin/vod/state'=>'資源類別',
     'admin/vod/isend'=>'完結',
-
     'admin/vod/tpl'=>'內容頁模板',
     'admin/vod/tpl_play'=>'播放頁模板',
     'admin/vod/tpl_down'=>'下載頁模板',
@@ -1464,8 +1463,8 @@ return [
     'admin/vod/select_plot'=>'選擇分集劇情',
     'admin/vod/copyright'=>'版權',
     'admin/vod/serialize'=>'連載',
-
-
+    'admin/vod/add_group_play'=>'添加壹組播放',
+    'admin/vod/add_group_down'=>'添加壹組下載',
     'admin/batch_tip'=>'共%s條數據需要處理，每頁%s條，共%s頁，正在處理第%s頁',
 
 
@@ -1543,6 +1542,7 @@ return [
     'admin/cj/next_page_rule'=>'下壹頁規則',
     'admin/cj/next_page_tip'=>'請填寫下壹頁超鏈接中間的代碼。如：<a href="http://www.xxx.com/page_1.html">下壹頁</a>，他的“下壹頁規則”為“下壹頁”。',
     'admin/cj/add_group'=>'添加壹組',
+
     'admin/cj/content_page'=>'內容分頁',
     'admin/cj/no_page'=>'不分頁',
     'admin/cj/original_page'=>'按原文分頁',
@@ -1598,6 +1598,21 @@ return [
     'admin/group/popedom_play'=>'播放頁',
     'admin/group/popedom_down'=>'下載頁',
     'admin/group/popedom_trysee'=>'試看',
+
+    'admin/annex/title'=>'附件管理',
+    'admin/annex/check'=>'檢測無效文件',
+    'admin/annex/check_complete'=>'無效文件清理完畢',
+    'admin/annex/info_tip'=>'共%s數據，分%s次檢測，每次%s條，當前第%s次',
+
+    'admin/annex/init_tip'=>'<strong>附件數據初始化1.0版本</strong><br>
+                            1，將對分類表、視頻、文章、網址、演員、角色、會員等表進行檢索。<br>
+                            2，將包含本地圖片地址內容插入到附件表中。<br>
+                            3，建議升級的版本執行壹次。',
+    'admin/annex/init_data'=>'數據初始化',
+    'admin/annex/dir_model'=>'文件夾模式',
+    'admin/annex/check_ok'=>'附件數據初始化結束',
+    'admin/annex/check_tip1'=>'正在檢測%s表...共%s條，分%s次檢測，每次%s條，當前第%s次',
+    'admin/annex/check_jump'=>'表%s檢測完畢，稍後繼續...',
 
 
     'admin/images/title'=>'圖片管理',
@@ -1797,7 +1812,7 @@ return [
     'admin/upload/test_write_ok'=>'測試寫入成功',
     'admin/upload/test_write_ok'=>'寫入失敗，請檢查臨時文件目錄權限',
     'admin/upload/not_find_extend'=>'未找到第三方擴展上傳類庫',
-    'admin/upload/no_input_file'=>'未找到上傳的文件(原因：表單名可能錯誤，默認表單名“file”)！',
+    'admin/upload/no_input_file'=>'未找到上傳的文件(原因：表單名可能錯誤，默認表單名“file”或“imgdata”)！',
     'admin/upload/forbidden_ext'=>'非系統允許的上傳格式！',
     'admin/upload/upload_success'=>'文件上傳成功！',
     'admin/upload/upload_faild'=>'文件上傳失敗！',
